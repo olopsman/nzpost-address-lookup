@@ -1,10 +1,4 @@
 /*
- <Project>Paymark</Project>
- <Title>Unite</Title>
-
- <Description>
- </Description>
-
  <Organization><Organization>
  <ClassName>AddressLookupController<ClassName>
  <ApiVersion>40<ApiVersion>
