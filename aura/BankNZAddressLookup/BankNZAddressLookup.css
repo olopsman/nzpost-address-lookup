@@ -1,0 +1,6 @@
+.THIS .uiInput::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.THIS input::-webkit-calendar-picker-indicator {
+  display: none;
+}

@@ -1,0 +1,9 @@
+<aura:component implements="force:hasSObjectName,force:hasRecordId,forceCommunity:availableForAllPageTypes,lightning:actionOverride" controller="AddressLookupController" access="global">
+    <aura:attribute name="streetValue" type="String" />
+    <aura:attribute name="streetType" type="String" default="physical" />
+    <aura:registerEvent name="addressLookup" type="c:BankNzAddressLookupEvt" />
+    <input type="text" class="slds-input uiInput"  aura:id="street-search" value="{!v.streetValue}"
+       label="Street"  onkeyup="{!c.fieldChange}" onblur="{!c.checkSelected}" />
+    <datalist id="{!'street-list-' + v.streetType}" aura:id="street-list">
+    </datalist>
+</aura:component>

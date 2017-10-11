@@ -1,0 +1,21 @@
+.THIS .customPadd {
+	margin-top:0px;
+}
+.THIS .toggleDisplay {
+	display:none;
+}
+.THIS .slds-spinner_container {
+  z-index: 10000;
+  position: fixed;
+}
+.THIS .floatLeft {
+	float:right;
+	width:150px;
+}
+.THIS .uiInput::selection {
+	background:#D1FFC6;
+}
+
+.THIS .hidden {
+	display:none;
+}

@@ -1,0 +1,78 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes"  access="global">
+  <aura:attribute name="street" type="String"/>
+  <aura:attribute name="suburb" type="String"/>
+  <aura:attribute name="city" type="String"/>
+  <aura:attribute name="postcode" type="String"/>
+
+  <!-- handle the address lookup event -->
+  <aura:handler name="addressLookup" event="c:BankNzAddressLookupEvt" action="{!c.handleAddressLookup}" />
+    <div class="slds-page-header">
+    <div class="slds-grid">
+      <div class="slds-col slds-has-flexi-truncate">
+        <div class="slds-media slds-no-space slds-grow">
+          <div class="slds-media__figure">
+            <span class="slds-icon_container slds-icon-standard-user">
+              <lightning:icon iconName="custom:custom18" variant="inverse"/>
+            </span>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- Display the new contact form -->
+    <div class="slds-form slds-form_compound">
+    <br />
+    <!--Merchant Details-->
+    <fieldset class="slds-form-element">
+      <h3 class="slds-text-heading_small slds-m-bottom_medium">Merchant Details</h3>
+
+        <div class="slds-form-element__group">
+          <div class="slds-form-element__row">
+            <div class="slds-form-element slds-size_1-of-2">
+              <div class="uiInput uiInputText uiInput--default uiInput--input">
+              <label class="slds-form-element__label"><span class="required " >* </span><span>Search Address</span></label>
+              <c:BankNZAddressLookup streetType="physical" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slds-form-element__group">
+          <div class="slds-form-element__row">
+            <div class="slds-form-element slds-size_1-of-2">
+              <div class="uiInput uiInputText uiInput--default uiInput--input">
+              <label class="slds-form-element__label"><span class="required " >* </span><span>Physical Street Address</span></label>
+                <force:inputField  value="{!v.street}"
+                 />
+              </div>
+            </div>
+            <div class="slds-form-element slds-size_1-of-2">
+              <label class="slds-form-element__label"><span>Suburb</span></label>
+              <force:inputField  value="{!v.suburb}"
+                 />
+            </div>
+          </div>
+        </div>
+
+        <div class="slds-form-element__group">
+          <div class="slds-form-element__row">
+            <div class="slds-form-element slds-size_1-of-2">
+              <div class="uiInput uiInputText uiInput--default uiInput--input">
+              <label class="slds-form-element__label"><span class="required " >* </span><span>City</span></label>
+              <force:inputField value="{!v.city}" 
+                 />
+              </div>
+            </div>
+            <div class="slds-form-element slds-size_1-of-2">
+              <div class="uiInput uiInputText uiInput--default uiInput--input">
+              <label class="slds-form-element__label"><span class="required " >* </span><span>Post Code</span></label>
+              <force:inputField value="{!v.postcode}"
+                 />
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </fieldset>
+    <!-- End Merchant Details-->
+</aura:component>
